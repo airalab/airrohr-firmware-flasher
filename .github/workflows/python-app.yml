@@ -22,7 +22,7 @@ jobs:
         ls dist
     - uses: actions/upload-artifact@v2
       with:
-        name: airrohr-flasher
+        name: airrohr-flasher-macos
         path: dist/airrohr-flasher
         
   buildUbuntu20:
@@ -44,7 +44,7 @@ jobs:
         make deps dist && ls dist/
     - uses: actions/upload-artifact@v2
       with:
-        name: airrohr-flasher-ubuntu
+        name: airrohr-flasher-ubuntu20
         path: dist/airrohr-flasher
 
   buildUbuntuLatest:
@@ -66,7 +66,7 @@ jobs:
         make deps dist && ls dist/
     - uses: actions/upload-artifact@v2
       with:
-        name: airrohr-flasher-ubuntu
+        name: airrohr-flasher-ubuntu-latest
         path: dist/airrohr-flasher
     
   buildWin:
