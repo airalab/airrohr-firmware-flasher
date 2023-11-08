@@ -11,6 +11,7 @@ import hashlib
 import zlib
 import logging
 import json
+import random
 
 import requests
 from esptool import ESPLoader, erase_flash, write_flash
@@ -420,13 +421,13 @@ class MainWindow(QtWidgets.QMainWindow, mainwindow.Ui_MainWindow):
         # if sensor1 == sensor2:
         #     self.statusbar.showMessage(self.tr("2 times the same sensor."))
         #     return
-
+        random_id = random.randint(100000, 999999)
         if not apssid:
-            self.configjson['fs_ssid'] = "RobonomicsSensor-" + str(self.sensorID)
+            self.configjson['fs_ssid'] = "RobonomicsSensor-" + str(random_id)
             # self.configjson['fs_ssid'] = ""
             print(self.configjson['fs_ssid'])
         else:
-            self.configjson['fs_ssid'] = apssid + "-" + str(self.sensorID)
+            self.configjson['fs_ssid'] = apssid + "-" + str(random_id)
             self.customNameSave = apssid
             print(self.configjson['fs_ssid'])  
 
