@@ -20,7 +20,7 @@ jobs:
         pyinstaller airrohr-flasher.spec
         ls
         ls dist
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: airrohr-flasher-macos
         path: dist/airrohr-flasher
@@ -42,7 +42,7 @@ jobs:
     - name: build with pyinstaller
       run: |
         make deps dist && ls dist/
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: airrohr-flasher-ubuntu20
         path: dist/airrohr-flasher
@@ -64,7 +64,7 @@ jobs:
     - name: build with pyinstaller
       run: |
         make deps dist && ls dist/
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: airrohr-flasher-ubuntu22
         path: dist/airrohr-flasher
@@ -86,7 +86,7 @@ jobs:
     - name: build with pyinstaller
       run: |
         make deps dist && ls dist/
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: airrohr-flasher-ubuntu-latest
         path: dist/airrohr-flasher
@@ -105,7 +105,7 @@ jobs:
           pip install pyinstaller requests esptool zeroconf PyQt5
           pyinstaller airrohr-flasher.spec
           ls dist/
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: airrohr-flasher-win
           path: dist/airrohr-flasher.exe
@@ -124,7 +124,7 @@ jobs:
           pip install pyinstaller requests esptool zeroconf PyQt5
           pyinstaller airrohr-flasher.spec
           ls dist/
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: airrohr-flasher-win19
           path: dist/airrohr-flasher.exe
