@@ -100,15 +100,15 @@ class MainWindow(QtWidgets.QMainWindow, mainwindow.Ui_MainWindow):
 
         self.sensorsList = ["SDS011", "HTU21D", "Geiger Counter", "CCS811", "CCS811_5B" "SPS30", "BME280", "BMP180", "BMP280", "DHT22", "DNMS (noise)", "None"]
         # self.languagesList = ["EN","RU"]
-        self.populate_sensors1(self.sensorsList)
-        self.populate_sensors2(self.sensorsList)
+        # self.populate_sensors1(self.sensorsList)
+        # self.populate_sensors2(self.sensorsList)
         # self.populate_languages(self.languagesList)
 
-        self.sensor1Box.setCurrentIndex(0)
-        self.sensor2Box.setCurrentIndex(1)
+        # self.sensor1Box.setCurrentIndex(0)
+        # self.sensor2Box.setCurrentIndex(1)
         # self.languageBox.setCurrentIndex(0)
 
-        self.customName.setPlaceholderText("Default = RobonomicsSensor")
+        # self.customName.setPlaceholderText("Default = RobonomicsSensor")
 
         # self.wifiSSID.setPlaceholderText("Please double check...")
         # self.wifiPW.setPlaceholderText("Please double check...")
@@ -116,7 +116,7 @@ class MainWindow(QtWidgets.QMainWindow, mainwindow.Ui_MainWindow):
         # self.GPSlat.setPlaceholderText("Latitude of your sensor")
         # self.GPSlon.setPlaceholderText("Longitude of your sensor")
 
-        self.DonatedBy.setPlaceholderText("Donated by")
+        # self.DonatedBy.setPlaceholderText("Donated by")
 
         self.configjson = json.loads('{}')
         self.sensorID = 0
